@@ -1,0 +1,149 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo section */
+  .main-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    color: #00bcd4;
+  }
+    
+  #logo-text {
+    font-size: 0.6rem;
+    color: #ffffff;
+  }
+  
+  /* Nav items */
+  .nav-items ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-items li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .nav-items li:hover {
+    color: #00bcd4;
+  }
+  
+
+  .nav-login-search {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+
+  /* Search bar */
+  .nav-search {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+  }
+  
+  .nav-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding-left: 0.5rem;
+  }
+  
+  .material-icons {
+    color: #aaa;
+  }
+  
+  /* Login/Register button */
+  .login-register button {
+    background-color: #00bcd4;
+    color: #121212;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-register button:hover {
+    background-color: #0193a0;
+  }
+
+
+  .main-header {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, #121212, #02191d);
+    flex-wrap: wrap;
+  }
+
+  #left-main-header {
+    flex: 1 1 300px;
+    padding: 1rem;
+  }
+  
+  #right-main-header {
+    
+  }
+  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .nav-items ul {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .nav-search {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .nav-search input {
+      width: 100%;
+    }
+  
+    .login-register {
+      width: 100%;
+    }
+  
+    .login-register button {
+      width: 100%;
+    }
+  }
+  
