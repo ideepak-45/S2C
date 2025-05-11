@@ -19,7 +19,10 @@
     background-color: #121212;
     padding: 1rem 2rem;
     flex-wrap: wrap;
-  }
+    position: relative;
+    border-radius: 8px;
+    z-index: 1;
+  }  
   
   /* Logo section */
   .main-logo {
@@ -40,6 +43,7 @@
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
   
   .nav-items li {
@@ -49,6 +53,7 @@
   
   .nav-items li:hover {
     color: #00bcd4;
+    text-shadow: 0 0 8px #00bcd4, 0 0 16px #00bcd4;;
   }
   
 
@@ -95,24 +100,53 @@
   }
 
 
+  .navbar::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #012227,
+      #121212,
+      #121212,
+      #121212
+    );
+    background-size: 600% 600%;
+    animation: animated-border 8s ease infinite;
+  }
+
+
   .main-header {
     height: 600px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    background-image: linear-gradient(to bottom, #121212, #02191d);
+    background-image: linear-gradient(to right, #121212, #012227);
     flex-wrap: wrap;
   }
 
   #left-main-header {
-    flex: 1 1 300px;
-    padding: 1rem;
+    height: 100%;
+    width: 45%;    
   }
   
   #right-main-header {
-    
+    height: 100%;
+    width: 45%;
+  }
+
+  #right-main-header > img {
+    height: 100%;
+    width: 100%;
+    border: 2px;
+    /* border-radius: 80%; */
+    mix-blend-mode: color-dodge;
   }
   
 
