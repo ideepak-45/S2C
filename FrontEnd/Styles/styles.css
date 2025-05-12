@@ -111,15 +111,26 @@
     border-radius: inherit;
     background: linear-gradient(
       90deg,
-      #012227,
+      #013138,
       #121212,
-      #121212,
+      #013138,
       #121212
     );
     background-size: 600% 600%;
-    animation: animated-border 8s ease infinite;
+    animation: animated-border 60s ease infinite;
   }
 
+  @keyframes animated-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
   .main-header {
     height: 600px;
@@ -133,7 +144,11 @@
 
   #left-main-header {
     height: 100%;
-    width: 45%;    
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
   
   #right-main-header {
